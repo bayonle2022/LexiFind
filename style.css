@@ -1,0 +1,256 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:  sans-serif;
+    background-color: #fefdfd;
+}
+.container{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    height: 100vh;
+    position: relative;bottom: 250px;
+    margin-left: 100px;
+}
+
+img{
+    width: 22%;
+    
+}
+#search{
+    width: 300px;
+    height: 40px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+    margin-left: 100px;
+}
+#search-icon{
+    width: 30px;
+  
+    position: absolute; left: 620px;
+    cursor: pointer;
+    margin-right: 60px;
+}
+#search-button:hover{
+    background-color: white;
+    color: #1E3A8A;
+    transition: 0.3s;
+    border: solid;
+}
+
+#login-button{
+    width: 80px;
+    height: 30px;
+    border-radius: 25px;
+    border: solid 1px #1E3A8A;
+    background-color: white;
+    color: #1E3A8A;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 200px;
+}
+#login-button:hover{
+    background-color: #1E3A8A;
+    color: white;
+    transition: 0.3s;
+}
+
+
+
+
+#register-button{
+    width: 80px;
+    height: 30px;
+    border-radius: 25px;
+    border: solid 1px #1E3A8A;
+    background-color: white;
+    color: #1E3A8A;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 50px;
+}
+#register-button:hover{
+    background-color: #1E3A8A;
+    color: white;
+    transition: 0.3s;
+}
+.content{
+    width: 800px;
+    height: 300px;
+
+    position: absolute;
+    top: 200px;
+    left: 20%;
+    color: black;
+    padding: 0px;
+}
+#phonetic{
+    color: #1E3A8A;
+    padding: 20px 0;
+}
+
+.defi{
+   
+    visibility: hidden;
+}
+.meaning{
+    padding: 20px 0;
+}
+
+
+li{
+    padding: 5px 5px;
+    list-style: none;
+    color: #1E3A8A;
+}
+/* ...existing code... */
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+    .container {
+        margin-left: 20px;
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        position: static;
+    }
+    .content {
+        width: 90vw;
+        left: 0;
+        top: 120px;
+        position: static;
+        height: auto;
+    }
+    img {
+        width: 40%;
+    }
+    #search {
+        width: 80vw;
+        max-width: 400px;
+    }
+    #search-icon {
+        left: auto;
+        margin-right: 0;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+    .container {
+        margin-left: 0;
+        padding: 10px;
+        flex-direction: column;
+        align-items: stretch;
+        height: auto;
+        position: static;
+    }
+    .content {
+        width: 80vw;
+        left: 0;
+        top: 80px;
+        position: static;
+        padding: 10px 5px;
+        height: auto;
+        margin-left: 40px;
+    }
+    img {
+        width: 70%;
+        margin: 0 auto 10px 5px;
+        display: block;
+    }
+    #search {
+        width: 90vw;
+        max-width: 300px;
+        font-size: 14px;
+      margin-left: 30px;
+    }
+    #search-icon {
+        left: auto;
+      position: relative;
+        top: -34px;
+        right: -270px;
+        margin-left: 5px;
+        margin-top: 0;
+     
+        width: 24px;
+    }
+    #login-button,
+    #register-button {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+}
+
+#mode-toggle {
+    position: fixed;
+    
+    top: 30px;
+    right: -150px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 999;
+    transition: transform 0.2s ease;
+}
+
+#mode-toggle:hover {
+    transform: scale(1.2);
+}
+/* DARK MODE STYLES */
+body.dark-mode {
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
+body.dark-mode .container {
+    background-color: transparent;
+}
+
+body.dark-mode #search {
+    background-color: #1e1e1e;
+    color: white;
+    border: 1px solid #555;
+}
+
+body.dark-mode #search::placeholder {
+    color: #ccc;
+}
+
+body.dark-mode #search-icon {
+    filter: brightness(0) invert(1);
+}
+
+body.dark-mode .content {
+    color: #f5f5f5;
+}
+
+body.dark-mode li {
+    color: #f5f5f5;
+}
+
+body.dark-mode h1,
+body.dark-mode h3,
+body.dark-mode p {
+    color: #f5f5f5;
+}
+#mode-toggle {
+  margin-right: 200px;
+    margin-top: 40px;
+}
+
+.play-audio {
+    width: 70px;
+    height: 40px;
+    cursor: pointer;
+   margin: 20px 0 20px 0;
+   visibility: hidden;
+    
+}
